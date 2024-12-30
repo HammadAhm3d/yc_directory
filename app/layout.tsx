@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import "easymde/dist/easymde.min.css";
 import { Toaster } from "@/components/ui/toaster";
+import Head from "next/head";
 
 const workSans = localFont({
   src: [
@@ -67,6 +68,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="./favicon.ico" />
+      </Head>
       <body className={workSans.variable}>
         {children}
         <Toaster />
